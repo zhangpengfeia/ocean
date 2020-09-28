@@ -176,7 +176,7 @@ merge  //合并
 
 1. 问题1：
 
-   ![Snipaste_2020-09-27_20-44-43](G:\GIT\xingwenhang\assets/Snipaste_2020-09-27_20-44-43.png)
+   ![](./assets/Snipaste_2020-09-27_20-44-43.png)
 
    + 为什么会出现？
      + 有a和b两个开发者，当a push推送到远程仓库并且代码版本更新，此时开发者b也要push 推送到远程仓库，就会出现此错误
