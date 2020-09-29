@@ -27,6 +27,25 @@ body {
   padding: 30px;
   text-align: right;
 }
+.login .alt,
+.login .alt2 {
+  display: none;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  width: 250px;
+  height: 40px;
+  line-height: 40px;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 999;
+  border-radius: 10px;
+}
 .login img {
   display: block;
   margin: 0 auto;

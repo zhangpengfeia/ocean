@@ -10,58 +10,58 @@
 
 
     <script type="text/javascript" src="./assets/lib/jquery.js"></script>
-   
+    <script type="text/javascript" src="./assets/lib/layui/layui.all.js"></script>
 </head>
 <body>
-
     <div class="logo w">
         <img src="./assets/images/logo.png" alt="">
     </div>
 
     <div class="login signIn ">
+        <p class="alt2"></p>
         <div class="logo_title">
             <img src="./assets/images/login_title.png" alt="">
         </div>
-        <form class="layui-form" action="">
+        <form class="layui-form" id="form-signin" action="">
             <div class="layui-form-item form-item">
                 <i class="layui-icon">&#xe66f;</i>  
-                <input type="text" name="title" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+                <input type="text" name="username" lay-verify="uname"  placeholder="请输入用户名" autocomplete="off" class="layui-input">
             </div>
-
             <div class="layui-form-item form-item">
                 <i class="layui-icon">&#xe673;</i>   
-                <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                <input type="password" name="password"  required placeholder="请输入密码" autocomplete="off" class="layui-input">
             </div>
 
             <div class="layui-form-item form-item">
-                <button class="layui-btn" lay-submit lay-filter="formDemo">登录</button>
+                <button  class="layui-btn" lay-submit lay-filter="formDemo">登录</button>
             </div>
         </form>
         <a href="javascript:;" class="toggle">立即注册</a>
     </div>
-    <!-- 注册------------------------------------------------------------- -->
+    <!-- 注册--------------------------------------------------------------->
     <div class="login signUp none">
+        <p class="alt">用户注册失败！</p>
         <div class="logo_title">
             <img src="./assets/images/login_title.png" alt="">
         </div>
-        <form class="layui-form" action="">
+        <form class="layui-form" action="" id="form-signup">
             <div class="layui-form-item form-item">
                 <i class="layui-icon">&#xe66f;</i>  
-                <input type="text" name="title" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+                <input type="text"  required name="username" lay-verify="uname" placeholder="请输入用户名" autocomplete="off" class="layui-input">
             </div>
 
             <div class="layui-form-item form-item">
                 <i class="layui-icon">&#xe673;</i>   
-                <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                <input id="pwd" type="password"required  placeholder="请输入密码" autocomplete="off" class="layui-input">
             </div>
 
             <div class="layui-form-item form-item">
                 <i class="layui-icon">&#xe673;</i>   
-                <input type="password" name="password" required lay-verify="required" placeholder="请重新确认密码" autocomplete="off" class="layui-input">
+                <input type="password" name="password" required name="password" lay-verify="pwd" placeholder="请重新确认密码" autocomplete="off" class="layui-input">
             </div>
 
             <div class="layui-form-item form-item">
-                <button class="layui-btn" lay-submit lay-filter="formDemo">登录</button>
+                <button class="layui-btn" lay-submit lay-filter="formDemo">注册</button>
             </div>
         </form>
         <a href="javascript:;" class="toggle">登录</a>
@@ -69,5 +69,6 @@
 
 
 </body>
-<script type="text/javascript" src="./assets/js/login.js"></script>
+    <script type="text/javascript" src="./assets/js/common.js"></script>
+    <script type="text/javascript" src="./assets/js/login.js"></script>
 </html>
