@@ -1,0 +1,63 @@
+html {
+  background: url(../images/login_bg.jpg) no-repeat center center;
+  background-size: 100% 100%;
+  height: 100%;
+}
+body {
+  background-color: transparent;
+}
+.logo {
+  margin-top: 30px;
+}
+.signIn {
+  height: 310px;
+}
+.signUp {
+  height: 380px;
+}
+.login {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 400px;
+  background-color: #fff;
+  padding: 30px;
+  text-align: right;
+}
+.login img {
+  display: block;
+  margin: 0 auto;
+}
+.login a {
+  color: #19b9e7;
+}
+.logo_title {
+  margin-bottom: 20px;
+}
+.form-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+.form-item input {
+  padding-left: 40px;
+  height: 45px;
+}
+.form-item input:hover {
+  background-color: #f1f1f1;
+}
+.form-item button {
+  height: 45px;
+  width: 100%;
+  background-color: #19b9e7;
+}
+.form-item i {
+  line-height: 45px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  margin: auto;
+}
