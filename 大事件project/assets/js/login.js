@@ -4,7 +4,7 @@ $('.toggle').on('click',function(e){
     $(this).parents('.login').addClass('none').siblings('.login').removeClass('none')
 })
 
-
+//登录
 $('#form-signin').submit(function(e){
     e.preventDefault()
     var fd = $(this).serialize();
@@ -17,16 +17,13 @@ $('#form-signin').submit(function(e){
                 sessionStorage.setItem('token',res.token)
                 location.href = './index.html'
             }
-            $('.alt2').show();
-            $('.alt2').html(res.message)
-            setTimeout(function(){
-                $('.alt2').hide();
-            },2000)
+            layer.msg(res.message,{icon:2})
         }
     })
 })
 
 
+//注册
 $('#form-signup').submit(function(e){
     e.preventDefault();
     var fd = $(this).serialize();
@@ -36,19 +33,34 @@ $('#form-signup').submit(function(e){
         url:"api/reguser",
         data:fd,
         success:function(res){
-            console.log(res);
             if(res.status == 0){
                 setTimeout(function(){
                     $('.signUp').addClass('none')
                     $('.signIn').removeClass('none')
-                },2000)
+                },3000)
+                layer.msg(res.message,{icon:1})
             }
-            $('.alt').show();
-            $('.alt').html(res.message)
-            setTimeout(function(){
-                $('.alt').hide();
-            },2000)
         }
     })
 
 })
+
+
+//layui的form表单提示
+var form = layui.form;
+form.verify({
+    uname:function(value){
+        if(value.length < 4 || value.length >12){
+            return '请输入4到9个字符串'
+        }
+    },
+    pwd:function(value){
+        if(value.length<6 || value.length >16){
+            return '请输入6-16个字符'
+        }else if($('#pwd').val() !== value){
+            return '两次密码不一致'
+        }
+    }
+
+})
+

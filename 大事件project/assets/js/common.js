@@ -1,27 +1,30 @@
 
-//layui的form表单提示
-var form = layui.form;
-form.verify({
-    uname:function(value){
-        if(value.length < 4 || value.length >12){
-            return '请输入4到9个字符串'
-        }
-    },
-    pwd:function(value){
-        if(value.length<6 || value.length >16){
-            return '请输入6-16个字符'
-        }else if($('#pwd').val() !== value){
-            return '两次密码不一致'
-        }
-    }
-
-})
-
-
 //优化ajax,在每次ajax请求前都会触发
 var baseURL = 'http://ajax.frontend.itheima.net/'
 $.ajaxPrefilter(function(options){
-    console.log(options);
+
+    if(options.url !== 'api/login' && options.url !== 'api/reguser'){
+        options.headers = {
+            Authorization:sessionStorage.getItem('token')
+        }
+    }
 
     options.url = baseURL + options.url
+
+
+
+    options.beforeSend = function(){
+        window.NProgress && window.NProgress.start()
+    }
+
+    options.complete = function(res){
+
+        window.NProgress && window.NProgress.done()
+
+        if(res.responseJSON && res.responseJSON.status === 1 && responseJSON.message == "身份认证失败！"){
+            sessionStorage.removeItem('mytoken')
+            location.href = './login.html'
+        }
+    }
+
 })

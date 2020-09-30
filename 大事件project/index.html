@@ -6,6 +6,7 @@
   <title>layout 后台大布局 - Layui</title>
     <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
     <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/lib/nprogress/nprogress.css">
 
 
   <script> 
@@ -25,8 +26,8 @@
     <ul class="layui-nav layui-layout-right">
       <li class="layui-nav-item">
         <a href="javascript:;">
-          <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-          贤心
+          <img src="http://t.cn/RCzsdCq" class="layui-nav-img userphoto">
+          <span class="username"></span>
         </a>
         <dl class="layui-nav-child">
           <dd><a href="">基本资料</a></dd>
@@ -40,14 +41,16 @@
   <div class="layui-side layui-bg-black">
     <div class="layui-side-scroll">
       <div class="admin">
-          <div class="headPhoto"></div>
-          <div class="adminName">老王</div>
+          <div class="headPhoto">
+            <img class="userphoto" src="./assets/images/sample.jpg" alt="">
+          </div>
+          <div class="adminName username">老王</div>
       </div>
       <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
       <ul class="layui-nav layui-nav-tree"  lay-filter="test">
 
         <li class="layui-nav-item">
-            <a class="" href="javascript:;">
+            <a class="" href="./echrts.html" target="fname">
                 <i class="layui-icon">&#xe68e;</i>       
             首页</a>
         </li>
@@ -95,7 +98,7 @@
   
   <div class="layui-body">
     <!-- 内容主体区域 -->
-    <div style="padding: 15px;">内容主体区域</div>
+    <iframe src="./echrts.html" frameborder="0" name="fname"></iframe>
   </div>
   
   <div class="layui-footer">
@@ -106,9 +109,14 @@
 
 
 </body>
-<script type="text/javascript" src="./assets/lib/jquery.js"></script>
-<script src="./assets/lib/layui/layui.js"></script>
-<script type="text/javascript" src="./assets/js/index.js"></script>
+  <script type="text/javascript" src="./assets/lib/jquery.js"></script>
+  <script type="text/javascript" src="./assets/lib/layui/layui.all.js"></script>
+  <script type="text/javascript" src="./assets/lib/nprogress/nprogress.js"></script>
+
+
+  <script type="text/javascript" src="./assets/js/common.js"></script>
+  <script type="text/javascript" src="./assets/js/index.js"></script>
+  <script type="text/javascript" src="./assets/js/echrts.js"></script>
 <script>
     //JavaScript代码区域
     layui.use('element', function(){
