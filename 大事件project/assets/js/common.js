@@ -15,12 +15,14 @@ $.ajaxPrefilter(function(options){
 
     options.beforeSend = function(){
         window.NProgress && window.NProgress.start()
+        // window.NProgress && window.NProgress.set() - 设置百分比
+        // window.NProgress && window.NProgress.inc() - 稍微增加
+
+
     }
 
     options.complete = function(res){
-
         window.NProgress && window.NProgress.done()
-
         if(res.responseJSON && res.responseJSON.status === 1 && res.responseJSON.message == "身份认证失败！"){
             sessionStorage.removeItem('mytoken')
             location.href = './login.html'

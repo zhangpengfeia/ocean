@@ -22,11 +22,12 @@ $(function(){
         var file = e.target.files
         //将图片转为url地址
         var newurl = URL.createObjectURL(file[0])
-        
+        console.log(newurl);
         //重新渲染裁剪区域
         $('#image').cropper('destroy')    // 销毁旧的裁剪区域
         .attr('src', newurl)  // 重新设置图片路径
         .cropper(options)        // 重新初始化裁剪区域
+        // $('#image').attr('src',newurl)
 
     })
 
