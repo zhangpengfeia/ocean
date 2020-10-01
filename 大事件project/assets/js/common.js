@@ -21,7 +21,7 @@ $.ajaxPrefilter(function(options){
 
         window.NProgress && window.NProgress.done()
 
-        if(res.responseJSON && res.responseJSON.status === 1 && responseJSON.message == "身份认证失败！"){
+        if(res.responseJSON && res.responseJSON.status === 1 && res.responseJSON.message == "身份认证失败！"){
             sessionStorage.removeItem('mytoken')
             location.href = './login.html'
         }

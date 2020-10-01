@@ -1,0 +1,7 @@
+.form-fater {
+  width: 700px;
+  padding: 30px;
+}
+.form-fater .layui-form-label {
+  width: 90px;
+}
