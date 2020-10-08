@@ -10,7 +10,12 @@
     <link rel="stylesheet" href="../assets/css/info-avatar.css">
     <link rel="stylesheet" href="../assets/css/artivle-pub.css">
 
-
+  <script type="text/html" id="article-name">
+    {{each data}}
+      <option value=""></option>
+      <option value={{$value.Id}}>{{$value.name}}</option>
+    {{/each}}
+  </script>
 
 </head>
 <body>
@@ -30,14 +35,12 @@
         <div class="layui-form-item">
           <label class="layui-form-label">选择分类</label>
           <div class="layui-input-block">
-            <select name="cate_id" lay-verify="required">
-              <option value=""></option>
-              <option value="0">北京</option>
-              <option value="1">上海</option>
-              <option value="2">广州</option>
-              <option value="3">深圳</option>
-              <option value="4">杭州</option>
+
+            <select name="cate_id" lay-verify="required" id="category">
+                <option value=""></option>
+                <option value="0">北京</option>
             </select>
+
           </div>
         </div>
 

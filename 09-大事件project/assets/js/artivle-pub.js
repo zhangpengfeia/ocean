@@ -8,6 +8,22 @@ $(function(){
     }
     $("#image").cropper(opt)
 
+    function loadCateList () {
+        $.ajax({
+            type:'get',
+            url:"my/article/cates",
+            success:function(res){
+                console.log(res);
+                if(res.status == 0){
+                    var temp = template('article-name',res)
+                    $('#category').html(temp)
+                        layui.form.render('select') 
+                    }
+                }
+            })
+        }
+        loadCateList()
+    
 
 
     $("#select-pic").on('click',function(){
