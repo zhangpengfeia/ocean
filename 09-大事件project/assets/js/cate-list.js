@@ -14,6 +14,36 @@ $(function(){
         
     }
 
+    function del(i){
+        $.ajax({
+            type:"get",
+            url:"my/article/deletecate/"+i,
+            success:function(res){
+                if(res.status == 0){
+                  load()
+                }
+                    layer.msg(res.message)  
+            }
+        })
+    }
+
+    $("#delAll").click(function(){
+        $.ajax({
+            type:"get",
+            url:"my/article/cates",
+            success:function(res){
+                for(let i=0;i<res.data.length;i++){
+                    var index = res.data[i].Id
+                    del(index)
+                }
+               if(res.status == 0){
+                    var temp = template('cates-list',res)
+                    $('tbody').html(temp)
+               }
+            }
+        })
+    })
+
     load()
 
     $('#cate-add').click(function(e){
@@ -49,17 +79,7 @@ $(function(){
     $('.layui-table').on('click','#cate-del',function(e){
         var i = e.target.dataset.id
 
-        $.ajax({
-            type:"get",
-            url:"my/article/deletecate/"+i,
-            success:function(res){
-                if(res.status == 0){
-                  load()
-                }
-                    layer.msg(res.message)
-                
-            }
-        })
+        del(i)
 
     })
 
