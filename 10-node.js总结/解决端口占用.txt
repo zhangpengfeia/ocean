@@ -1,0 +1,5 @@
+
+
+在cmd中执行tskill node，结束node进程
+
+netstat  -aon查看端口号
