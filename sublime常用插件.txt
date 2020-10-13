@@ -1,3 +1,8 @@
+sublime_text:http://www.sublimetext.com/
+
+
+使用ctrl+shift+p 输入install package
+
 Emmet ：编码快捷键，前端必备
 
 JSFormat ：格式化代码
