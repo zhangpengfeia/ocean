@@ -274,7 +274,7 @@ fun(fun2,123)//fun是高阶函数，fun2是回调函数
 3. 重置表单
 
    ```js
-   form.reset() //是原生方法,重置表单
+   document.getElementById("form").reset() //是原生方法,重置表单
    ```
 
 
