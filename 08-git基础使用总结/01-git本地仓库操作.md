@@ -121,7 +121,7 @@ git add *.js  //将后辍为.js的文件添加到暂存区
 ```js
 git commit //不添加-m，会弹出编辑框强制添加备注
 
-git commit --amend //修改最后一次提交的备注
+
 ```
 
 + 除了新建的文件，原本就存在的文件修改后再次提交可直接使用commit存入本地
@@ -134,6 +134,8 @@ git commit -a -m "备注"
 ### 逆向操作
 
 ```js
+git commit --amend //修改最后一次提交的备注
+
 restore 命令，默认是带着 --worktree 参数的
 
 git restore --worktree  文件名
