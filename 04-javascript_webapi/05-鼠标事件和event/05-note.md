@@ -51,7 +51,6 @@ DOM.offsetHeight // 获取高度，返回num类型
 //offsetWidth不可以设置,只能读取
 
 
-
 DOM.clientwidth //获取宽度，不带边框
 DOM.clientHeight // 获取高度
 ```
