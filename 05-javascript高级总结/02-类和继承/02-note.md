@@ -101,6 +101,8 @@ hasOwnProperty() //判断是否为实例属性
 
 ### 类的继承
 
+> **其实质是先创造出父类的this对象，然后用子类的构造函数修改this** 
+
 1. extends 要继承的类
 2. constructor中使用super()获取继承类的属性
 
