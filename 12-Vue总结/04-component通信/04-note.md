@@ -25,7 +25,7 @@ Vue.component('father-component',{
 Vue.component('son-component',{
     props:{
         title:{
-		 	type:String,
+	    type:String,
             required: true //true为必须传
         }
     },//如果son本身有属性名呢，会报错
@@ -33,7 +33,7 @@ Vue.component('son-component',{
 })
 ```
 
-####dynamic grammar
+#### dynamic grammar
 
 1. 传递一般 dynamicData 时，需要加冒号
 2.  绑定字符串会被当成属性识别
@@ -57,7 +57,7 @@ Vue.component('son-component',{
 
 
 
-###son pass father
+### son pass father
 
 >  在子组件中调取父组件中的方法，并且传入要传递的数据
 
@@ -67,7 +67,7 @@ Vue.component('son-component',{
 
    
 
-####grammar
+#### grammar
 
 ```js
 Vue.component('father-component',{
