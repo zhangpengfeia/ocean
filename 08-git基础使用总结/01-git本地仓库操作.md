@@ -40,6 +40,7 @@ git add . 	//将所有文件添加到暂存区
 git ls-flies //查看暂存区文件
 
 git commit -m '描述这次做了什么功能'	//提交代码的备注
+git commit --no-verify -m "提交备注"   就可以跳过代码检查
 
 git status   //查看所有文件的状态。
 git log 	//查看历史版本
@@ -254,8 +255,9 @@ checkout //检出
   
 
 2. 暂存区已经将文件__add存入__，此时在工作目录中__修改文件__，___再次add___，是否会__覆盖__掉暂存区的文件？
-   + 会覆盖
-
+   
++ 会覆盖
+   
 3. 当文件commit提交到本地仓库中后，是否还可执行git restore 和git rm --cached操作
    + 不可
 
