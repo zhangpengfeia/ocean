@@ -108,6 +108,82 @@ Vue.component('son-component',{
 
 
 
+## **总结通信方式**
+
+1. Props + $emit()
+
+2. 给子组件传递一个数据，一个回调函数，父组件中定义回调函数，在子组件中调用改变传入的值。
+
+3. $parent + $children
+
+   ```js
+   在子组件中通过 this.$parent.message 访问到父组件的至
+   在父组件中使用 this.$children[0].number = 50; 访问第0项，因为一个父组件可能会有多个子组件
+   ```
+
+4. provide + inject
+
+   ```js
+   fatherComponent
+   {
+   	provide:{
+   +		message:"123"
+   	}	
+   }
+   
+   sonComponent
+   inject:['message']
+   ```
+
+5. $attrs + $listeners
+
+   ```js
+   父传子传孙子
+   father
+   <son :name>
+   
+   changeName(){
+       this.name = 'df'
+   }
+   
+   son
+   <button @click="$listeners.changeName">按钮</button> //触发父元素的函数
+   <sonS v-bind="$attrs" > //$attrs属性中包括了father传过来的值
+   
+   sonS
+   <div>{{$attrs.name}}</div>
+   ```
+
+6. ref
+
+   ```js
+   father
+   <Son ref='child' />
+   <button @click="changeName"></button>
+   
+   methods:{
+       changeName(){
+           this.$refs.child.属性名 //获取子组件属性
+           this.$refs.child.方法名() //调用子组件中的方法
+       }
+   }
+   
+   
+   son
+   data{
+   	return{
+           属性名
+       }
+   }
+   方法名(){
+   	this.age = 50
+   }
+   ```
+
+   
+
+
+
 
 
 ## vue-单页应用开发

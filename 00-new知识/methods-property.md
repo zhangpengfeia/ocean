@@ -2,7 +2,9 @@
 
 
 
-### Object.keys
+## 方法
+
+### Object.keys()
 
 + 返回值：一个表示给定对象的所有可枚举属性的字符串数组 。
 + object.keys和 for in 的排序没有任何区别,for in还会枚举其原型链上的属性
@@ -20,7 +22,7 @@ let arr = [a,b,c]
 Object.keys(arr)	//["0","1","2"]
 ```
 
-### Object.values
+### Object.values()
 
 + 返回值：对象所有的values
 
@@ -77,9 +79,9 @@ Object.keys(arr)	//["0","1","2"]
   arr.includes('a') //找a这个元素 
   ```
 
-### Object.assign （）
+### Object.assign ()
 
-Object.assign方法用于对象的合并，将源对象（ source ）的所有可枚举属性，复制到目标对象（ target ）。 
++ Object.assign方法用于对象的合并，将源对象（ source ）的所有可枚举属性，复制到目标对象（ target ）。 
 
 ```js
 Object.assign方法的第一个参数是目标对象，后面的参数都是源对象。
@@ -89,4 +91,18 @@ var source2 = { c: 3 };
 Object.assign(target, source1, source2);
 target // {a:1, b:2, c:3}
 ```
+
+### window.onerror
+
++ 它是一个全局的异常处理函数，可以抓取所有的JavaScript异常。
+
+  ```
+  window.onerror = function(message, source, line, column, error) {	
+  	
+  }
+  ```
+
+  
+
+## 属性
 

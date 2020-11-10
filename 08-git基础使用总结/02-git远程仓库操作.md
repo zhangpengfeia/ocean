@@ -80,11 +80,9 @@ git branch -D 分支名称 //-D,没有合并也会强制删除
 
 git checkout -b 分支名称 //创建分支并切换到分支
 
-
-
 //修改分支名，如果对于分支不是当前分支，可以使用下面代码：
 git branch -m 原分支名 新分支名
-如果是当前，那么可以使用加上新名字
+//如果是当前，那么可以使用加上新名字
 git branch -m 新分支名称
 ```
 
@@ -97,7 +95,10 @@ git branch -vv //查看远程仓库和本地仓库的关联
 
 git oush origin -delete 分支名 //删除远程分支
 
+
 git branch -u origin/master //建立当前分支与远程分支的映射关系
+
+git checkout dev origin/dev  //创建分支dev并和远程origin/dev分支惯量，本地dev分支的初始代码和远程的dev分支代码一样
 
 git branch --unset-upstream //撤销本地分支与远程分支的映射关系
 
