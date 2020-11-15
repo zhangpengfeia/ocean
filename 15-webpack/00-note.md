@@ -119,9 +119,7 @@ new TerserWebpackPlugin({
 
   ```js
   npm i webpack-dev-server -D
-  
   ```
-
   
 
 ### 初始化vue项目
@@ -135,12 +133,3 @@ npm i vue
 
 
 ```
-
-
-
-
-
-
-
-
-
