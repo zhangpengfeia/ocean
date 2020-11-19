@@ -65,36 +65,78 @@ npm install amfe-flexible
 import 'amfe-flexible'
 ```
 
-## 封装axios库
+## 二次封装axios库
 
 ```js
-utils/request.js
+# 怎么处理同时传入 params 和 data 传参的形式。
 
-1.使用axios.create
-  创建2个 instance 封装2个基地址。
+1.utils/axios.js
+  使用 axios.create 创建2个 instance 封装2个基地址,
+  使用 .interceptors.request.use 添加请求头携带 token  
+  
+2.utils/fetch.js
+  引入 axios.js 
+  封装 fetchData 方法做 get 和 post 的请求处理，如果是 get 就是 params 属性传参，并做数据序列化处理，否则用 data 属性传参
+  使用 try/catch 判断接口是否调用成功，成功将数据返回，失败返回 null。
+
+3.utils/request.js
+  引入 fetch.js
+  调用 fetchData(路径，参数)
 ```
 
-### 在线思维导图
 
-```
-百度脑图,幕布
-```
 
-## 登录	
+## login
 
 + __步骤__
   1. 使用 vant 布局页面,调整样式。
+  
   2. 使用 import 动态导入路由。
+  
   3. 调用接口，配置校验规则，设置登陆时的提示信息。
-  4. 二次封装 axios。
-  5. 通过 Vuex 封装 token ，存入用户信息，并对 token 做持久化。
-
-
+  
+  4. 二次封装 axios，配置其全局路径，和 header 携带 token 。
+  
+  5. 登录成功后，通过 Vuex 封装 token ，存入用户信息，并对 token 做持久化。
+  
+     
 
 ## layout
 
 + **步骤**
-  1. 布局导航栏，logo和搜索，页尾的二级路由。
+  1. 布局导航栏，logo和搜索，配置页尾的4个二级路由。
+  2. 定制每个功能模块的工作进度计划表。
+
+### 主页
+
++ **步骤**
+  1. 使用 __vant-tabs组件__ 搭建频道列表。
+  2. 调用接口，有两个参数时间戳和id，渲染到频道列表，标题使用__vant-ell__,内容使用插槽 __slot="label"__ 插入图片和文字。
+  3. 引入一段 css样式调试频道内容固定高度，从而出现滚动条。
+  4. 实现 下拉刷新重新发送请求，把数据添加到数组头部，上拉加载更多。
+  5. 将文章内容抽离为组件。
+  6. 使用 dayjs 处理日期时间。
+  7. 封装更多操作组件，使用 van-popup 。
+  8. 如果用户登录则每个文章详情底下都有x按钮。
+  9. 点击x时将id传给父组件，并处理大数问题。
+  10. 点不感兴趣，调用接口删除文章。
+  11. 点举报，调用举报接口。
+  12. 右侧设置频道管理面包按钮，完成基本布局。
+  13. 将用户频道渲染到用户我的频道，可选频道渲染 全部频道减去我的频道。
+  
++ 难点
+
+  频道管理的那一块，怎么实现 可选频道 和 我的频道的 选中和删除。
+
++ 注意
+
+  ```
+  vant-tabs 有懒加载效果，点击时才会渲染对应内容
+  ```
+
+  
+
+
 
 ## 问题
 
@@ -113,3 +155,9 @@ utils/request.js
    + **解决**
 
      将浏览器的谷歌翻译禁用就可。
+
+3. this.form 明明有值，为什么 this.orm.timestamp 就为null.
+
+   ![image-20201118175936619](01-note.assets/image-20201118175936619.png)
+
+   
