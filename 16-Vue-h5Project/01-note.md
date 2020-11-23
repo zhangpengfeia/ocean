@@ -137,9 +137,34 @@ import 'amfe-flexible'
   vant-tabs 有懒加载效果，点击时才会渲染对应内容
   ```
 
-  
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+## new知识
+
++ Vuex中的getters
+
+  相当于vue实例中的计算属性
+
++ props中的属性
+
+  默认值，校验
+
++ $router.back()
+
+  返回的意思
 
 ## 问题
 
@@ -164,3 +189,11 @@ import 'amfe-flexible'
    ![image-20201118175936619](01-note.assets/image-20201118175936619.png)
 
 4. 刷新时列表重复渲染了两次
+
+   + **解决**
+
+     因为在钩子函数中调用了
+
+5. 喜欢和取消喜欢，报错
+
+   ![image-20201121154148536](01-note.assets/image-20201121154148536.png)
