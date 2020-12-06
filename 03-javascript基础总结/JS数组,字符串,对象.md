@@ -1,19 +1,19 @@
 # 数组方法
 
-- join()
-- push()和pop()
-- shift() 和 unshift()
-- sort()
-- reverse()
-- concat()
-- slice()
-- splice()
-- indexOf()和 lastIndexOf() （ES5新增）
-- forEach() （ES5新增）
-- map() （ES5新增）
-- filter() （ES5新增）
-- every() （ES5新增）
-- some() （ES5新增）
+- join()  将数组按什么格式拼接为字符串。
+- push()和pop() 添加 和 最后一个元素。
+- shift() 和 unshift()  添加和删除第一个元素。
+- sort() 从小到大排序数组。
+- reverse() 反转数组，改变原数组
+- concat() 拼接数组
+- slice() 截取数组，从第几个位置开始，第几个位置结束
+- splice() 截取数组，从第几个位置开始，截取几个下标。
+- indexOf()和 lastIndexOf() （ES5新增）查找匹配的第一个元素，有返回下标无返回-1
+- forEach() （ES5新增）循环数组，不会改变元素本身。
+- map() （ES5新增）遍历数组，对其每一个元素进行操作后返回，会返回一个新数组。
+- filter() （ES5新增）遍历数组，如果为true 返回当前元素。
+- every () （ES5新增）遍历数组，所有元素都为true才会返回true
+- some () （ES5新增） 遍历数组，有一项为true就为true
 
 
 

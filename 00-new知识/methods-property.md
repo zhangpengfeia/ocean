@@ -53,7 +53,7 @@ Object.keys(arr)	//["0","1","2"]
   toString.call(数据)
   ```
 
-###Array.of()
+### Array.of()
 
 + 该方法的作用非常类似Array 构造器，但在
   使用单个数值参数的时候并不会导致特殊结果
@@ -103,7 +103,17 @@ target // {a:1, b:2, c:3}
   }
   ```
 
-  
+
+
+
+### Object.setPrototypeOf()
+
+```js
+用来设置一个对象的原型链。
+Object.setPrototypeOf(a,b) //b 做为 a 的原形对象
+```
+
+
 
 ## 属性
 

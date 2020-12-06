@@ -24,13 +24,13 @@ a.prototype.toString //toString是原型对象中没有的，它是从object继�
 
 ## 为什么要使用prototype？
 
-> 使用prototype原型添加的方法，解决了数据共享，内存浪费，代码重复执行，问题，节省了内存空间.
+> 使用 prototype 原型添加的方法，解决了数据共享，内存浪费，代码重复执行，问题，节省了内存空间.
 
 
 
-##什么是proto？
+## 什么是__proto__？
 
->  这是js中每个对象原型都有的属性，它指向的是prototype,所以它也会指向该对象的原型对象
+>  这是 js 中每个对象原型都有的属性，它指向的是prototype,所以它也会指向该对象的原型对象
 
 ```js
 a.prototype.__proto__ ===  Object.prototype //true

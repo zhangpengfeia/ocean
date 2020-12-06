@@ -112,7 +112,7 @@ Vue.component('son-component',{
 
 1. Props + $emit()
 
-2. 给子组件传递一个数据，一个回调函数，父组件中定义回调函数，在子组件中调用改变传入的值。
+2. 回调函数的方式，给子组件传递一个数据，一个回调函数，父组件中定义回调函数，在子组件中使用 props接收，并调用改变传入的值。
 
 3. $parent + $children
 
@@ -205,7 +205,7 @@ Vue.component('son-component',{
 2. 使用申明好的对应关系，实例化一个router实例
 3. 将router实例挂载到vue中
 
-####grammar
+#### grammar
 
 ```js
 

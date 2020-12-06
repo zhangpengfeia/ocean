@@ -48,14 +48,6 @@ Object.prototype.toString.call()与toString.call()是真正意义上的等价
 
 
 
-## vue的双向绑定原理?
-
-
-
-## 发布订阅，自定义事件？
-
-
-
 
 
 
