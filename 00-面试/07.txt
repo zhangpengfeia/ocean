@@ -1,0 +1,36 @@
+﻿2.vue用的那个版本
+
+3.vuex用过吗?怎么用的?
+
+4.vue的请求拦截器
+
+5.hash/histroy的区别
+
+6.vue前端怎么解决跨域
+
+7.vue3.0了解过吗
+
+8.vue开发终于到过什么问题?怎么解决的
+
+9.js 判断数据类型的方法 typeof  instarnof
+
+10.js 数据类型	string number booler array object function symbol
+
+11.echarts 简单配置项
+
+12.清除浮动
+  1.ovfollow:hieend
+   2.给父元素末尾添加一个空标签
+  3.伪元素
+ 4.双微元素
+ 5.给父元素设置border
+
+13.实现一个三角形
+
+14.0.5px如何实现
+
+15.git常用指令
+
+16.vue路由跳转怎么实现的?
+
+17.localStorage和sessionStorage的区别? 如果localStorage存满会有什么现象?

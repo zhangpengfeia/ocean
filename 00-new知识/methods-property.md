@@ -11,7 +11,6 @@
 + object.keys和 for in 的排序没有任何区别,for in还会枚举其原型链上的属性
 
 ```js
-
 let ogj = {
     name:'zs',
     age:18,
@@ -112,6 +111,14 @@ target // {a:1, b:2, c:3}
 用来设置一个对象的原型链。
 Object.setPrototypeOf(a,b) //b 做为 a 的原形对象
 ```
+
+### Object.hasOwnProperty()
+
+```js
+Object的hasOwnProperty() 方法返回一个布尔值，判断对象是否包含特定的自身（非继承）属性。
+```
+
+
 
 
 

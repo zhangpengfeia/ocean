@@ -1,0 +1,22 @@
+﻿1.先谈谈自己的学习能力
+2.盒子水平垂直居中
+3.px rem rm区别
+4.介绍盒子模型
+5.css三角形
+6.H5、C3动画用过哪些
+7.es5继承,es6继承,super写哪,什么作用?
+8.鼠标点击盒子,拖动,松开停在最后位置的逻辑/注销事件的方法  on,addEventListener区别
+8.觉得echarts怎么样
+9.觉得element-ui怎么样
+10.mvvm,数据驱动视图如何理解?
+11.用less吗?那vue中全局样式写哪?如何引用?
+12.vue不爽的地方
+13.vue如何解决跨域问题
+14.vuex主要核心模块,action的作用?如何修改store中的数据?getter类似vue的什么?
+15.computed和methods的区别
+16.闭包,用过吗?作用是什么?
+17.node,相对其他后端语言的优点
+18.用过vue.minix吗?
+19.react用过吗? 
+20.用过TS?如何项目是TS+vue 你该怎么办?
+
