@@ -201,9 +201,11 @@ this.setState({ msg: '123' },function(){ })
 
  ## 生命周期
 
+> 基本上每个框架都会有生命周期，是框架提供给开发者，让开发者在特定的时间注册自定义逻辑，本质上是回调函数
+
 ```js
 * 挂载阶段
-	1. 初始化 state 数据
+	1. 初始化 state 数据 constructor
     2. 初次渲染视图执行 render
     3. 加载完成后执行的钩子函数 componentDidMount()
 * 更新阶段
